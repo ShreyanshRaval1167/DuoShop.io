@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:  "Spartan", sans-serif;
+  font-family: "Spartan", sans-serif;
 }
 
 html {
@@ -133,16 +131,17 @@ body {
     color: #088178;
 }
 
-#content button {
+#content .button {
     background-image: url(button.png);
     background-color: transparent;
     color: #088178;
     border: 0;
-    padding: 14px 80px 14px 65px;
+    padding: 14px 89px 14px 65px;
     background-repeat: no-repeat;
     cursor: pointer;
     font-weight: 700;
     font-size: 20px;
+    text-decoration: none;
 }
 
 #feature {
@@ -254,24 +253,31 @@ body {
   font-size: 15px;
 }
 
-#pro-1 .pro-2 #cart11{
-  width: 40px;
-  height: 40px;
+
+button{
+  padding: 5px;
+  /* bottom: -12px; */
   line-height: 40px;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   border-radius: 10px;
   background-color: #e8f6ea;
   color: #088178;
-  border: 1px solid #cce7d0;
-  position: absolute;
-  bottom: 20px;
-  right: 10px;
-  transition: 1s;
+  font-weight: bolder;
+  position: relative;
+  float: right;
+  transition: 1s;f
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
-#pro-1  #arrow11{
+
+.bottom{
+  bottom: -17px;
+}
+ #pro-1  #arrow11{
   width: 40px;
-  top: 465px;
+  top: 516px;
   left: 0px;
   height: 40px;
   line-height: 40px;
@@ -285,12 +291,21 @@ body {
   bottom: 20px;
   right: 10px;
   transition: 1s;
+} 
+.cart-btn {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
 }
 
-#pro-1 .pro-2 #cart11:hover{
-  border-radius: 50px;
-  font-size: 24px;
+#cart {
+  position: relative;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  /* margin: 1em 4em 0 0; */
 }
+
 #pro-1{
   text-align: center;
 }

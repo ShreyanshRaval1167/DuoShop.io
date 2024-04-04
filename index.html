@@ -7,31 +7,36 @@
     <script src="https://kit.fontawesome.com/db3a4a445a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/style.css">
-    
+    <script src="Script/script.js"></script>
 </head>
 <body>
-    <section id="header">
+    <div id="header">
         <a href="#"><img src="Img/Logo 3.svg" class="logo" alt=""></a>
         <div>
             <ul id="navbar">
                 <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="index (2).html">Shop</a></li>
+                <li><a href="shop.html">Shop</a></li>
                 <li><a href="#about-1">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html"><i class="fa-solid fa-cart-plus"></i></a></li>
+                <!-- <li><a href="cart.html"><i class="fa-solid fa-cart-plus"></i></a></li> -->
+                <div class="cart-btn">
+                    <i id="cart" class="fas fa-shopping-cart"></i>
+                </div>
             </ul>
         </div>
-    </section>
+    </div>
         
-    <section id="content">
+    <div id="content">
         <h4>Trade in Offer</h4>
         <h2>Super value deals</h2>
         <h1>On all products</h1>
         <p>Save more with coupons & get upto 70% off!</p>
-        <button>Shop now</button>
-    </section>
+        <!-- <button>Shop now</button> -->
+        <a href="shop.html" class="button">Shop</a>
 
-    <section id="feature" class="section-p1">
+    </div>
+
+    <div id="feature" class="section-p1">
         <div class="fe">
             <img src="Img/features/f1.png" alt="">
             <h6>Free Shipping</h6>
@@ -57,9 +62,9 @@
             <h6>24/7 Support</h6>
          </div>
 
-    </section>
+    </div>
 
-    <section id="pro-1" class="section-p1">
+    <div id="pro-1" class="section-p1">
         <h2>Featured Products</h2>
         <p>Summer Collection New Morden Design</p>
         <div class="pro-container">
@@ -76,10 +81,12 @@
                     </div>
                     <h4><i class="fa fa-rupee"></i> 780</h4>
                 </div>
-                <a href="#">
-                    <i id="cart11" class="fa fa-cart-plus"></i>
-                </a>
+                <button class="add-to-cart">
+                    <i class="fa fa-cart-plus cart11"> </i>
+                    Cart
+                  </button>
             </div>
+            
             <div class="pro-2">
                 <img src="Img/Products/P2.jpg" alt="">
                 <div class="pro-3">
@@ -92,14 +99,16 @@
                     </div>
                     <h4><i class="fa fa-rupee"></i> 780</h4>
                 </div>
-                <a href="#">
-                    <i id="cart11" class="fa fa-cart-plus"></i>
-                </a>
+                <button class="add-to-cart">
+                    <i class="fa fa-cart-plus cart11"> </i>
+                    Cart
+                  </button>
             </div>
+
             <div class="pro-2">
                 <img src="Img/Products/P3.jpg" alt="">
                 <div class="pro-3">
-                    <h5>Wuxi's Men Knitted Loose Fit Shirt with Mandarin Collar, Crewneck Sweatshirt for Men</h5>
+                    <h5>Wuxi's Men Knitted Loose Fit Shirt with Mandarin Collar, Crewneck Sweatshirt for Men </h5>
                     <div class="star">
                         <i class="star"></i>
                         <i class="fas fa-star"></i>
@@ -110,32 +119,35 @@
                     </div>
                     <h4><i class="fa fa-rupee"></i> 780</h4>
                 </div>
-                <a href="#">
-                    <i id="cart11" class="fa fa-cart-plus"></i>
-                </a>
+                 <button class="add-to-cart bottom">
+                    <i class="fa fa-cart-plus cart11"> </i>
+                    Cart
+                </button>
             </div>
+
             <div class="pro-2">
                 <img src="Img/Products/P4.jpg" alt="">
                 <div class="pro-3">
                     <h5>Wuxi's Men Knitted Loose Fit Shirt, Crewneck Sweatshirt for Men</h5>
+    
                     <div class="star">
                         <i class="star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        
+                        <i class="fas fa-star"></i>                        
                     </div>
                     <h4><i class="fa fa-rupee"></i> 780</h4>
                 </div>
-                <a href="#">
-                    <i id="cart11" class="fa fa-cart-plus"></i>
-                </a>
+                <button class="add-to-cart bottom">
+                    <i class="fa fa-cart-plus cart11"> </i>
+                    Cart
+                </button>
             </div>
-            <a href="index (2).html">
+            <a href="Shop.html">
                 <i aria-placeholder="More" id="arrow11" class="fa fa-arrow-right"></i>
-            </a>
+            </a> 
         </div>
-    </section> 
+    </div> 
     
     <footer id="about-1" class="section-1">
         <div class="footer-1">
@@ -186,7 +198,7 @@
                 </a>
             </div>
             <p>Secured Payment Gateways</p>
-            <img src="" alt="">
+            <!-- <img src="" alt=""> -->
         </div>
 
         <div class="copyright">
