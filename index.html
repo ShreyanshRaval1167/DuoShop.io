@@ -7,9 +7,24 @@
     <script src="https://kit.fontawesome.com/db3a4a445a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <script src="Script/script.js"></script>
+    <!-- <script src="js/script2.js"></script> -->
 </head>
 <body>
+
+    <div class="cart-modal-overlay">
+        <div class="cart-modal">
+          <i id="close-btn" class="fas fa-times"></i>
+          <h1 class="cart-is-empty">Cart is empty</h1>
+          <div class="product-rows"></div>
+  
+          <div class="total">
+            <h1 class="cart-total">TOTAL :</h1>
+            <span class="total-price">₹ 0.00</span>
+            <button class="purchase-btn">PURCHASE</button>
+          </div>
+        </div>
+      </div>
+
     <div id="header">
         <a href="#"><img src="Img/Logo 3.svg" class="logo" alt=""></a>
         <div>
@@ -18,11 +33,18 @@
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="#about-1">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <a href="#" id="close">
+                    <i class="fa fa-times"></i>
+                </a>
                 <!-- <li><a href="cart.html"><i class="fa-solid fa-cart-plus"></i></a></li> -->
-                <div class="cart-btn">
-                    <i id="cart" class="fas fa-shopping-cart"></i>
-                </div>
+               <!-- <div class="cart-btn">
+            <i id="cart" class="fas fa-shopping-cart"></i>
+            <span class="cart-quantity"></span>
+          </div> -->
             </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fa fa-outdent"></i>
         </div>
     </div>
         
@@ -68,86 +90,113 @@
         <h2>Featured Products</h2>
         <p>Summer Collection New Morden Design</p>
         <div class="pro-container">
-            <div class="pro-2">
-                <img src="Img/Products/P1.jpg" alt="">
-                <div class="pro-3">
-                    <h5>Hanes Men's Ecosmart Fleece Sweatshirt, Cotton-blend Pullover, Crewneck Sweatshirt for Men, 1 Or 2 Pack Available</h5>
-                    <div class="star">
-                        <i class="star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4><i class="fa fa-rupee"></i> 780</h4>
-                </div>
-                <button class="add-to-cart">
-                    <i class="fa fa-cart-plus cart11"> </i>
-                    Cart
-                  </button>
+          <div class="pro-2">
+            <img class="product-image" src="Img/Products/P1.jpg" alt="Product 1 Image"/>
+            <div class="pro-3">
+              <h5>
+                Hanes Men's Ecosmart Fleece Sweatshirt, Cotton-blend Pullover,
+                Crewneck Sweatshirt for Men, 1 Or 2 Pack Available
+              </h5>
+              <div class="star">
+                <i class="star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>
+                <span class="currency">₹</span>
+                <span class="product-price">1150</span>
+              </h4>
             </div>
-            
-            <div class="pro-2">
-                <img src="Img/Products/P2.jpg" alt="">
-                <div class="pro-3">
-                    <h5>Woxen's Spread Collared Checked Shirt, Cotton-blend Pullover, Crewneck Sweatshirt for Men</h5>
-                    <div class="star">
-                        <i class="star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fa fa-star-half-empty"></i>
-                    </div>
-                    <h4><i class="fa fa-rupee"></i> 780</h4>
-                </div>
-                <button class="add-to-cart">
-                    <i class="fa fa-cart-plus cart11"> </i>
-                    Cart
-                  </button>
+            <button class="add-to-cart">
+              <i class="fa fa-cart-plus cart11"></i>
+              Cart
+            </button>
+          </div>
+  
+          <!-- Product 2 -->
+  
+          <div class="pro-2">
+            <img class="product-image" src="Img/Products/P2.jpg" alt="Product 2 Image"/>
+            <div class="pro-3">
+              <h5>
+                Woxen's Spread Collared Checked Shirt, Cotton-blend Pullover, Crewneck Sweatshirt for Men
+              </h5>
+              <div class="star">
+                <i class="star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fa fa-star-half-empty"></i>
+              </div>
+              <h4>
+                <span>₹</span>
+                <span class="product-price">950</span>
+              </h4>
             </div>
-
-            <div class="pro-2">
-                <img src="Img/Products/P3.jpg" alt="">
-                <div class="pro-3">
-                    <h5>Wuxi's Men Knitted Loose Fit Shirt with Mandarin Collar, Crewneck Sweatshirt for Men </h5>
-                    <div class="star">
-                        <i class="star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fa fa-star-half-empty"></i>
-                    </div>
-                    <h4><i class="fa fa-rupee"></i> 780</h4>
-                </div>
-                 <button class="add-to-cart bottom">
-                    <i class="fa fa-cart-plus cart11"> </i>
-                    Cart
-                </button>
+            <button class="add-to-cart">
+              <i class="fa fa-cart-plus cart11"></i>
+              Cart
+            </button>
+          </div>
+  
+          <!-- Product 3 -->
+  
+          <div class="pro-2">
+            <img class="product-image" src="Img/Products/P3.jpg" alt="Product 3 Image"/>
+            <div class="pro-3">
+              <h5>
+                Wuxi's Men Knitted Loose Fit Shirt with Mandarin Collar, Crewneck Sweatshirt for Men
+              </h5>
+              <div class="star">
+                <i class="star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fa fa-star-half-empty"></i>
+              </div>
+              <h4>
+                <span>₹</span>
+                <span class="product-price">1040</span>
+              </h4>
             </div>
-
-            <div class="pro-2">
-                <img src="Img/Products/P4.jpg" alt="">
-                <div class="pro-3">
-                    <h5>Wuxi's Men Knitted Loose Fit Shirt, Crewneck Sweatshirt for Men</h5>
-    
-                    <div class="star">
-                        <i class="star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>                        
-                    </div>
-                    <h4><i class="fa fa-rupee"></i> 780</h4>
-                </div>
-                <button class="add-to-cart bottom">
-                    <i class="fa fa-cart-plus cart11"> </i>
-                    Cart
-                </button>
+            <button class="add-to-cart">
+              <i class="fa fa-cart-plus cart11"></i>
+              Cart
+            </button>
+          </div>
+  
+          <!-- Product 4 -->
+  
+          <div class="pro-2">
+            <img class="product-image" src="Img/Products/P4.jpg" alt="Product 4 Image"/>
+            <div class="pro-3">
+              <h5>
+                Wuxi's Men Knitted Loose Fit Shirt, Crewneck Sweatshirt for Men
+              </h5>
+              <div class="star">
+                <i class="star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i> 
+              </div>
+              <h4>
+                <span>₹</span>
+                <span class="product-price">780</span>
+              </h4>
             </div>
-            <a href="Shop.html">
-                <i aria-placeholder="More" id="arrow11" class="fa fa-arrow-right"></i>
-            </a> 
+            <button class="add-to-cart">
+              <i class="fa fa-cart-plus cart11"></i>
+              Cart
+            </button>
+          </div>
+  
+          <a href="Shop.html">
+            <i aria-placeholder="More" id="arrow11" class="fa fa-arrow-right"></i>
+        </a>
         </div>
-    </div> 
+      </div>
     
     <footer id="about-1" class="section-1">
         <div class="footer-1">
@@ -191,10 +240,10 @@
             <p>From App Store or Google Play</p>
             <div class="row">
                 <a href="">
-                    <img id="store" src="Img/app-store.png" alt="">
+                    <img class="store" src="Img/app-store.png" alt="">
                 </a>
                 <a href="">
-                    <img id="store" src="Img/play-store.png" alt="">
+                    <img class="store" src="Img/play-store.png" alt="">
                 </a>
             </div>
             <p>Secured Payment Gateways</p>
@@ -206,5 +255,6 @@
         </div>
     </footer>
     
+    <script src="js/script2.js"></script>
 </body>
 </html>

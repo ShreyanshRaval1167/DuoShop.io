@@ -53,6 +53,7 @@ body {
 
  .logo{
     height: 65px;
+    filter: contrast(2);
 } 
 
 #header{
@@ -112,6 +113,7 @@ body {
 }
 
 #pro-1 .pro-2{
+  height: fit-content;
   width: 23%;
   min-width: 250px;
   padding: 10px;
@@ -232,6 +234,7 @@ footer .footer-1{
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 20px;
+  padding-left: 15px;
 }
 
 footer .logo{
@@ -264,13 +267,13 @@ footer .follow i{
   cursor: pointer;
 }
 
-footer .install .row img{
-  border: 1px solid #088178;
-  border-radius: 6px;
-}
+footer .install {
+  padding-right: 10px;
+} 
 
 footer .install img{
-  margin: 10px 0 15px 0;
+  margin: 10px 10px 15px 0;
+  display: inline;
 }
 
 
@@ -511,5 +514,65 @@ img {
   
   .product-quantity {
     margin: .5em 0 .5em 0
+  }
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#close{
+  display: none;
+}
+@media (max-width:799px) {
+  #navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #172a3a;
+    box-shadow: 0 40px 60px #172a3a;
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+
+  #cart{
+    left: 22px;
+    position: relative;
+  }
+
+  #navbar.active{
+    right: 0px ;
+  }
+
+  #navbar li{
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  #mobile i{
+    color: white;
+    font-size: 24px;
+    /* padding-left: 20px; */
+  }
+
+  #close{
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
   }
 }
