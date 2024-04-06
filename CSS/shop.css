@@ -308,16 +308,14 @@ img {
   color: white;
   font-size: 16px;
   cursor: pointer;
-  /* margin: 1em 4em 0 0; */
 }
 
 .cart-quantity {
   color: white;
-  /* background-color: red; */
   padding: 2px;
   position: absolute;
   top: -2px;
-  right: -17px;
+  right: -40px;
   border-radius: 15px;
   font-weight: bolder;
 }
