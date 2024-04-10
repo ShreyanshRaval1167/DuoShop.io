@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="CSS/admin.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header id="header">
+    <div class="logo">
+      <!-- Your logo image or text here -->
+    </div>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#dash" class="active">Dashboard</a></li>
+        <li><a href="#pro">Product Management</a></li>
+        <li><a href="#order">Order Management</a></li>
+        <li><a href="#user">User Management</a></li>
+        <li><a href="#Analytics">Analytics</a></li>
+        <li><a href="#content">Content Management</a></li>
+        <li><a href="#setting">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+
+    <!-- Dashboard Content -->
+    <div id="dash" class="dashboard">
+        <h1>Dashboard</h1>
+        <div class="summary">
+          <div class="box">
+            <h3>Total Users</h3>
+            <p>1000</p>
+          </div>
+          <div class="box">
+            <h3>Total Orders</h3>
+            <p>500</p>
+          </div>
+          <div class="box">
+            <h3>Total Products</h3>
+            <p>200</p>
+          </div>
+          <div class="box">
+            <h3>Total Revenue</h3>
+            <p>$10,000</p>
+          </div>
+        </div>
+        <div class="charts">
+          <div class="chart">
+            <h2>Users Chart</h2>
+            <div class="content1">
+                <div class="user-chart-container">
+            <canvas id="userChart"></canvas>
+          </div>
+            </div>
+          </div>
+          <div class="chart">
+            <h2>Sales Chart</h2>
+            <div class="content">
+              <div class="content">
+                <div class="sales-chart-container">
+                  <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Product Management Page -->
+    <div id="pro" class="product-management">
+        <h1>Product Management</h1>
+        
+        <div class="actions">
+          <button class="add-product-btn">Add Product</button>
+        </div>
+        <div class="edit-product">
+            <h2>Edit Product</h2>
+            <input type="hidden" id="edit-product-id">
+            <input type="text" id="edit-product-name" placeholder="Product Name">
+            <input type="number" id="edit-product-price" placeholder="Product Price">
+            <input type="number" id="edit-product-stock" placeholder="Product Stock">
+            <button class="save-edit-btn">Save Changes</button>
+          </div>
+        <div class="product-list">
+          <h2>Product List</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Product rows will be inserted here dynamically -->
+            </tbody>
+          </table>
+        </div>
+        
+      
+      </div>
+      
+      
+    
+    <!-- Order Management Page -->
+    <div id="order" class="order-management">
+        <h1>Order Management</h1>
+    
+        <div class="order-container">
+          <div class="order-category pending">
+            <h2>Pending Orders</h2>
+            <div class="order-list">
+              <!-- Sample Pending Orders -->
+              <div class="order">
+                <p>Order ID: #1234</p>
+                <p>Customer: Ramesh Patel</p>
+                <p>Total Amount: Rs.1100</p>
+              </div>
+              <div class="order">
+                <p>Order ID: #5678</p>
+                <p>Customer: Jaimin Rami</p>
+                <p>Total Amount: Rs.2150</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="order-category shipped">
+            <h2>Shipped Orders</h2>
+            <div class="order-list">
+              <!-- Sample Shipped Orders -->
+              <div class="order">
+                <p>Order ID: #9876</p>
+                <p>Customer: Manish Pandya</p>
+                <p>Total Amount: Rs.1840</p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Add sections for Delivered and Confirmed Orders here -->
+        </div>
+      </div>
+    
+    <!-- User Management Page -->
+    <div class="user-management">
+      <h1>User Management</h1>
+      
+      <div class="actions">
+        <button class="add-user-btn">Add User</button>
+      </div>
+      
+      <div class="edit-user">
+        <h2>Edit User</h2>
+        <input type="hidden" id="edit-user-id">
+        <input type="text" id="edit-user-name" placeholder="User Name">
+        <input type="text" id="edit-user-email" placeholder="User Email">
+        <input type="number" id="edit-user-action" placeholder="User Action">
+        <button class="save-edit-btn">Save Changes</button>
+        <button class="cancel-edit-btn">Cancel</button>
+      </div>
+      
+      <div class="user-list">
+        <h2>User List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- User rows will be inserted here dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+      
+      <!-- Analytics Page -->
+    <div id="Analytics" class="analytics-section">
+        <h2>Analytics</h2>
+        <div class="analytics-details">
+          <div class="detail">
+            <h3>Total Users</h3>
+            <p>1000</p>
+          </div>
+          <div class="detail">
+            <h3>Active Users</h3>
+            <p>750</p>
+          </div>
+          <div class="detail">
+            <h3>New Users (This Month)</h3>
+            <p>150</p>
+          </div>
+          <div class="detail">
+            <h3>Total Revenue</h3>
+            <p>$50,000</p>
+          </div>
+          <!-- Add more details as needed -->
+        </div>
+      </div>
+      
+    
+    <!-- Content Management Page -->
+    <div id="content" class="contact-management-section">
+        <h2>Contact Management</h2>
+        <div class="contact-details">
+          <div class="contact">
+            <h3>Shreyansh Raval</h3>
+            <p>Email: shrey.ra@example.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+            <p>Address: Ahmedabad</p>
+          </div>
+          <div class="contact">
+            <h3>Jaydip Adalaja</h3>
+            <p>Email: jaydip.ada@example.com</p>
+            <p>Phone: +1 (234) 567-8901</p>
+            <p>Address: Ahmedabad</p>
+          </div>
+          <!-- Add more contacts as needed -->
+        </div>
+      </div>
+      
+    
+    <!-- Settings Page -->
+    <div id="setting" class="settings-section">
+        <h2>Settings</h2>
+        <div class="settings">
+          <div class="setting">
+            <h3>Account Settings</h3>
+            <ul>
+              <li>Change Password</li>
+              <li>Update Email</li>
+              <li>Privacy Settings</li>
+            </ul>
+          </div>
+          <div class="setting">
+            <h3>Notification Settings</h3>
+            <ul>
+              <li>Email Notifications</li>
+              <li>Push Notifications</li>
+              <li>Customize Alerts</li>
+            </ul>
+          </div>
+          <!-- Add more settings as needed -->
+        </div>
+      </div>
+      
+
+  <script src="js/admin-scipt.js"></script>
+</body>
+</html>

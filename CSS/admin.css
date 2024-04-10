@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+h1,h2{
+  color: #003b64;;
+  margin-bottom: 10px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+#navbar ul {
+  display: flex;
+  list-style-type: none;
+}
+
+#navbar li {
+  margin-right: 20px;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#navbar a:hover {
+  color: #00ffee;
+}
+
+#navbar .active {
+  color: #00ffee;
+}
+/* Dashboard Section Styles */
+.dashboard {
+  padding: 40px 80px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.dashboard .summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.dashboard .summary .box {
+  background-color: #003b64;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  margin-right: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard .summary .box:last-child {
+  margin-right: 0;
+}
+
+.dashboard .summary .box h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.dashboard .summary .box p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.dashboard .charts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+}
+
+.dashboard .chart {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard .chart h2 {
+  font-size: 24px;
+  padding: 20px;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.dashboard .chart .content {
+  padding: 20px;
+}
+
+.dashboard .chart .content p {
+  font-size: 16px;
+  color: #465b52;
+}
+
+.dashboard .chart .content p:last-child {
+  margin-bottom: 0;
+}
+.product-management {
+  padding: 40px 80px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.actions {
+  margin-bottom: 20px;
+}
+
+.add-product-btn,
+.delete-product-btn,
+.edit-product-btn {
+  background-color: #003b64;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.product-list th,
+.product-list td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.product-list th {
+  background-color: #003b64;
+  color: white;
+}
+
+/* Updated CSS for product management */
+.edit-product {
+  display: none;
+  margin-top: 20px;
+}
+
+.edit-product h2 {
+  margin-bottom: 10px;
+}
+
+.edit-product input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-product .save-edit-btn {
+  background-color: #003b64;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Show edit product section when editing */
+.editing .edit-product {
+  display: block;
+}
+.order-management {
+  padding: 40px 80px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.order-category {
+  margin-bottom: 20px;
+}
+
+.order-category h2 {
+  margin-top: 0;
+}
+
+.order {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Specific Styles for Different Order Categories */
+.pending .order {
+  background-color: #ffe6cc; /* Light Orange */
+}
+
+.shipped .order {
+  background-color: #cceeff; /* Light Blue */
+}
+.user-management {
+  padding: 40px 80px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.actions {
+  margin-bottom: 20px;
+}
+
+.add-user-btn,
+.delete-user-btn,
+.edit-user-btn {
+  background-color: #003b64;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.user-list th,
+.user-list td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-list th {
+  background-color: #003b64;
+  color: white;
+}
+
+.user-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.user-list tr:hover {
+  background-color: #ddd;
+}
+
+.edit-user {
+  display: none;
+  margin-top: 20px;
+}
+
+.edit-user h2 {
+  margin-bottom: 10px;
+}
+
+.edit-user input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-user .save-edit-btn {
+  background-color: #003b64;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.analytics-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-section h2 {
+  margin-bottom: 10px;
+  color: #003b64;
+}
+
+.analytics-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.detail {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.detail h3 {
+  color: #003b64;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.detail p {
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.contact-management-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-management-section h2 {
+  margin-bottom: 10px;
+  color: #003b64;
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.contact {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.contact h3 {
+  color: #003b64;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  color: #333;
+  font-size: 16px;
+}
+
+.settings-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.settings-section h2 {
+  margin-bottom: 10px;
+  color: #003b64;
+}
+
+.settings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.setting {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.setting h3 {
+  color: #003b64;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.setting ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.setting li {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.setting li:hover {
+  color: #003b64;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+body {
+  width: 100%;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+.logo {
+  height: 65px;
+  filter: contrast(2);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  background: #172a3a;
+  box-shadow: 0 20px 15px rgba(51, 118, 160, 0.1);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f1f1f1;
+  transition: 1s;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #00ffee;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #00ffee;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+
